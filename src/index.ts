@@ -7,6 +7,10 @@ export type {
 } from '@sudobility/types';
 import type { BaseResponse } from '@sudobility/types';
 
+// Re-export IRenderable from genui_types for chat types
+import type { IRenderable } from '@sudobility/genui_types';
+export type { IRenderable } from '@sudobility/genui_types';
+
 // =============================================================================
 // Type Aliases
 // =============================================================================
@@ -117,6 +121,22 @@ export interface HistoryUpdateRequest {
   datetime?: string;
   /** Numeric value, optional for updates, must be positive if provided */
   value?: number;
+}
+
+// =============================================================================
+// Chat
+// =============================================================================
+
+/** Request body for the chat endpoint. */
+export interface ChatRequest {
+  /** The user's request, potentially enriched with answers to previous clarifying questions */
+  request: string;
+}
+
+/** Response from the chat endpoint. Output is a GenUI IRenderable tree. */
+export interface ChatResponse {
+  /** The GenUI IRenderable output from the AI */
+  output: IRenderable;
 }
 
 // =============================================================================
