@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/genuivo_types",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "TypeScript types for Starter API - template project",
   "type": "module",
   "main": "./dist/index.js",
@@ -39,7 +39,7 @@
   "author": "Sudobility",
   "license": "BUSL-1.1",
   "peerDependencies": {
-    "@sudobility/genui_types": "^0.0.1",
+    "@sudobility/genui_types": "^0.0.2",
     "@sudobility/types": "^1.9.61"
   },
   "devDependencies": {
